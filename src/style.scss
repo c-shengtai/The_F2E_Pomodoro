@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500&display=swap');
+@import './variable.scss';
+@import './helpe.scss';
+
+*, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.left {
+  border: 1px solid black;
+  flex: 2;
+  background-color: $light-pink;
+}
+
+.right {
+  position: relative;
+  border: 1px solid black;
+  flex: 1;
+  background-color: $dark-blue;
+}
+
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: absolute;
+  right: 5.3rem;
+
+  &-icons {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      margin-top: 3rem;
+      width: 2.25rem;
+      height: 2.25rem;
+      cursor: pointer;
+    }
+  }
+
+  &-text {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+
+    span {
+      writing-mode: vertical-lr;
+      cursor: pointer;
+    }
+  }
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: 5.3rem;
+  
+
+  &-link {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    color: #FFFFFF33;
+
+    &-active {
+      color: $dark-pink;
+    }
+  }
+
+  &-icon {
+    font-size: 3rem;
+  }
+
+  &-text {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-left: .5rem;
+  }
+}
+
+.sidebar-container {
+  flex: 2;
+}
+
+.content-wrapper {
+  display: flex;
+}
+
+.content-container {
+  flex: 2;
+}
+
+.mission-wrapper {
+  width: 27.8rem;
+  height: 3.5rem;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    align-self: stretch;
+    width: 25rem;
+    padding: .5rem;
+
+    &::placeholder {
+      color: $dark-pink;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-style: italic;
+    }
+  }
+
+  span {
+    font-size: 1.5rem;
+    color: $dark-pink;
+    margin: 1rem;
+    cursor: pointer;
+  }
+}
